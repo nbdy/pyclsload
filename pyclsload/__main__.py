@@ -11,6 +11,11 @@ def main():
     a = ap.parse_args()
 
     print("Loading class '{0}' from '{1}'.".format(a.cls, a.file))
-    o = load(a.file, a.cls)
+    o = load(a.file, a.cls, ("yeee", ), kwargs={"yorg"})
     print("Executing method '{0}'.".format(a.method))
-    o.__dict__[a.method]()
+    print(o.__dict__)
+    o.hello_world()
+
+
+if __name__ == '__main__':
+    main()
