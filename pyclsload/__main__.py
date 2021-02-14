@@ -13,7 +13,6 @@ def main():
     print("Loading class '{0}' from '{1}'.".format(a.cls, a.file))
     o = load(a.file, a.cls, ("yeee", ), kwargs={"yorg"})
     print("Executing method '{0}'.".format(a.method))
-    print(o.__dict__)
     o.hello_world()
 
 
