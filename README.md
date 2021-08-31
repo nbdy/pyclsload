@@ -5,8 +5,8 @@ basically just a wrapper for importlib
 ## why?
 ```python
 # doesn't look
-from pyclsload import load
-o = load("somefile.py", "ThisAClass")
+from pyclsload import load_cls
+o = load_cls("somefile.py", "ThisAClass")
 o.somemethod()
 
 # better than
