@@ -16,7 +16,10 @@ o = module_from_spec(s)
 s.loader.exec_module()
 o.somemethod()
 ```
-
+## features
+- [X] load_cls
+- [X] init_cls
+- [X] load_dir (based on the premise that the class is called like the module)
 ## install
 ```shell
 pip3 install pyclsload

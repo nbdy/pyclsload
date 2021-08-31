@@ -1,11 +1,20 @@
 from importlib.util import spec_from_file_location, module_from_spec
+from os import listdir
+from os.path import join
 
 
 def load_cls(file_path: str, class_name: str):
     s = spec_from_file_location(class_name, file_path)
     m = module_from_spec(s)
     s.loader.exec_module(m)
-    return m
+    return m.__dict__[class_name]
+
+
+def load_dir(directory: str) -> list:
+    r = []
+    for fn in listdir(directory):
+        r.append(load_cls(join(directory, fn), fn.split(".")[0]))
+    return r
 
 
 def init_cls(file_path: str, class_name: str, *args, **kwargs):
