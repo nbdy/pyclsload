@@ -1,4 +1,5 @@
 # pyclsload
+[![CodeFactor](https://www.codefactor.io/repository/github/nbdy/pyclsload/badge)](https://www.codefactor.io/repository/github/nbdy/pyclsload)
 easily load classes from source files<br>
 basically just a wrapper for importlib
 ## why?

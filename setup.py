@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     long_description=open("README.rst", "r").read(),
     name="pyclsload",
-    version="1.01",
+    version="1.02",
     description="importlib wrapper, instantiate class dynamically in one line",
     author="Pascal Eberlein",
     author_email="pascal@eberlein.io",
@@ -14,5 +14,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.9',
     ],
-    packages=find_packages()
+    packages=find_packages(),
+    long_description_content_type="text/markdown",
 )
